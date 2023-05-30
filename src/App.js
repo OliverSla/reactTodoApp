@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import OneTodos from './components/OneTodos'
+import data from './data/data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  return(
+    <div className='appWrapper'>
+    <div className='todo'></div>
+      <OneTodos />git remote add origin https://github.com/OliverSla/reactTodoApp.git
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
