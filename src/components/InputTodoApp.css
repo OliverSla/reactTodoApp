@@ -1,0 +1,49 @@
+
+
+.inputTodoApp{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: var(--input-shadows);
+}
+
+.todoInputField{
+    color: var(--input-color);
+    font-size: 16px;
+    width: 100%;
+    background: none;
+    border: none;
+    padding-left: 16px;
+}
+
+.todoInputField:focus{
+    border: none;
+    outline: none;
+}
+
+.todoInputField::placeholder{
+    color: var(--placeholder-color);
+}
+
+.todoAddBtn{
+    font-size: 16px;
+    width: 140px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    border-radius: 0px 16px 16px 0px;
+    transition: 0.2s linear;
+}
+
+.todoAddBtn:hover{
+    transform: rotate(2deg) scale(1.1);
+    color: white;
+    cursor: pointer;
+    background: var(--primary-color);
+    border-radius: 0px 16px 16px 0px;
+}

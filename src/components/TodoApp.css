@@ -1,0 +1,36 @@
+.todoApp{
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #FBFBFB;
+    width: 50vw;
+    min-width: 800px;
+    min-height: 526px;
+    border-radius: 48px;
+    box-shadow: var(--primary-shadows);
+}
+
+.todoHeader{
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+}
+
+.todoHeader h1{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.todoHeader h2{
+    margin-top: -8px;
+    color: var(--secondary-color);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
