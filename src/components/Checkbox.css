@@ -1,0 +1,42 @@
+
+/* Checkbox */
+
+.taskCheck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 70px;
+    position: relative;
+}
+
+.taskCheck:hover{
+    cursor: pointer;
+}
+
+.checkIcon{
+    position: relative;
+}
+
+
+.checkIconChecked{
+    position: absolute;
+    bottom: 16px;
+    left: 23px;
+    transition: 0.5s;
+}
+
+
+.checkIconChecked {
+    animation-duration: 0.3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

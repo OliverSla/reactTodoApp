@@ -1,4 +1,7 @@
 import './TodoTasks.css'
+import Checkbox from './Checkbox'
+import Options from './Options'
+
 
 const TodoTasks = () => {
   return (
@@ -6,14 +9,17 @@ const TodoTasks = () => {
         <div className='todoTasksLine'></div>
         <div className='tasks'>
             <div className="oneTask">
-                <div className="taskCheck"></div>
-                <h3>Vyniesť smetie</h3>
-                <div className="options"><>
+                <Checkbox />
+                <div className="taskText"><h3>Vyniesť smetie </h3></div>
+                <Options />
             </div>
 
             <div className="oneTask">
-                <h3>Upratať izbu</h3>
+                <Checkbox />
+                <div className="taskText"><h3>Vyniesť smetie </h3></div>
+                <Options />
             </div>
+
         </div>
     </div>
   )
