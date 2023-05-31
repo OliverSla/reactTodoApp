@@ -1,14 +1,35 @@
 
 .todoTasks{
     position: relative;
-    background: rgba(0, 128, 0, 0.192);
     width: 100%;
     min-height: 300px;
 }
 
 .todoTasksLine{
-    border-top: 1px solid black;
-    width: calc(100% - 100px);
-    margin: 0px 50px;
+    border-top: 1px solid var(--line-color);
+    width: calc(100% - 200px);
+    margin: 0px 100px;
     height: 1px;
+}
+
+.tasks{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 250px;
+}
+
+.oneTask{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    width: calc(100% - 200px);
+    height: 50px;
+    background: green;
+}
+
+.oneTask:first-child{
+    margin-top: 0px;
 }

@@ -4,7 +4,7 @@ import './InputTodoApp.css';
 const InputTodoApp = () => {
   return (
     <div className='inputTodoApp'>
-         <input className='todoInputField' type="text" placeholder="Zadajte novu úlohu" />
+         <input className='todoInputField' type="text" placeholder="Zadajte novú úlohu" />
       <button className='todoAddBtn'>Pridať úlohu</button>
     </div>
   )

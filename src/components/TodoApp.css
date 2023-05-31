@@ -6,7 +6,7 @@
     background-color: #FBFBFB;
     width: 50vw;
     min-width: 800px;
-    min-height: 526px;
+    min-height: 360px;
     border-radius: 48px;
     box-shadow: var(--primary-shadows);
 }
