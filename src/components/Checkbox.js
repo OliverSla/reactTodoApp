@@ -2,10 +2,15 @@ import Square from '../svgs/Square'
 import { useState } from 'react'
 import Check from '../svgs/Check'
 import './Checkbox.css'
+import { saveTodos, loadTodos } from '../data/data'
 
-const Checkbox = () => {
+const Checkbox = ({completed, handleComplete }) => {
 
+  
     const [isClicked, setIsClicked] = useState(false)
+
+    
+
 
 
   return (

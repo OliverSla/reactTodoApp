@@ -1,22 +1,26 @@
 import './OneTodo.css'
-import data from '../data/data.js'
+import Checkbox from './Checkbox'
+import Options from './Options'
 
 
 
-const OneTodos = () => {
+const OneTodos = ({oneTodo, completeTodo, deleteTodo}) => {
+
+
+    const handleComplete = () => {
+        completeTodo(oneTodo.id);
+      };
+
+    const handleDelete = () => {
+        deleteTodo(oneTodo.id);
+      };
+
     return (
-
-        data.map((oneTodo, index) =>{
-
-            const {id, todo} = oneTodo
-
-            return (
-                <div className='oneTodo' key={id}>
-                    <h1> {index + 1}. {todo} </h1>
-                    <div>  </div>
-                </div>
-            )
-        })
+        <div className="oneTask">
+        <Checkbox completed={oneTodo.completed} handleComplete={handleComplete}/>
+        <div className="taskText"><h3> {oneTodo.text} </h3></div>
+        <Options handleDelete={handleDelete}/>
+    </div>
     )
 }
 

@@ -1,24 +1,26 @@
 import './TodoTasks.css'
-import Checkbox from './Checkbox'
-import Options from './Options'
+import OneTodos from './OneTodos'
 
 
-const TodoTasks = () => {
+const TodoTasks = ({todos, completeTodo, deleteTodo}) => {
+
+
+
   return (
     <div className='todoTasks'>
         <div className='todoTasksLine'></div>
         <div className='tasks'>
-            <div className="oneTask">
-                <Checkbox />
-                <div className="taskText"><h3>Vyniesť smetie </h3></div>
-                <Options />
-            </div>
 
-            <div className="oneTask">
-                <Checkbox />
-                <div className="taskText"><h3>Vyniesť smetie </h3></div>
-                <Options />
-            </div>
+        {todos.map((oneTodo) => {
+          return(
+            <OneTodos
+            key={oneTodo.id}
+            oneTodo={oneTodo}
+            completeTodo={completeTodo}
+            deleteTodo={deleteTodo}
+           />
+          )
+        })}
 
         </div>
     </div>
