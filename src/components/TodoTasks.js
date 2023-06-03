@@ -2,7 +2,7 @@ import './TodoTasks.css'
 import OneTodos from './OneTodos'
 
 
-const TodoTasks = ({todos, completeTodo, deleteTodo}) => {
+const TodoTasks = ({todos}) => {
 
 
 
@@ -11,14 +11,9 @@ const TodoTasks = ({todos, completeTodo, deleteTodo}) => {
         <div className='todoTasksLine'></div>
         <div className='tasks'>
 
-        {todos.map((oneTodo) => {
+        {todos.map((oneTodo, index) => {
           return(
-            <OneTodos
-            key={oneTodo.id}
-            oneTodo={oneTodo}
-            completeTodo={completeTodo}
-            deleteTodo={deleteTodo}
-           />
+            <OneTodos key={oneTodo.id} oneTodo={oneTodo} index={index} />
           )
         })}
 

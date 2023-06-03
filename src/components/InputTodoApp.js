@@ -1,6 +1,6 @@
 import React from 'react'
 import './InputTodoApp.css';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -20,7 +20,7 @@ const InputTodoApp = ({addTodo}) => {
       const newTodo = {
         id: uuidv4(),
         text: inputValue,
-        checked: false,
+        completed: false,
       }
 
       addTodo(newTodo);

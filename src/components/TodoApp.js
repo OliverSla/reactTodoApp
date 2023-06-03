@@ -6,7 +6,6 @@ import { saveTodos, loadTodos } from '../data/data'
 
 const TodoApp = () => {
 
-    const [isClicked, setIsClicked] = useState(false)
     const [todos, setTodos] = useState(loadTodos);
 
     const addTodo = (newTodo) => {
@@ -15,23 +14,6 @@ const TodoApp = () => {
         saveTodos(updatedTodos);
       };
 
-      const deleteTodo = (id) => {
-        const updatedTodos = todos.filter((oneTodo) => oneTodo.id !== id);
-        setTodos(updatedTodos);
-        saveTodos(updatedTodos);
-      };
-
-      const completeTodo = (id) => {
-    const updatedTodos = todos.map((oneTodo) => {
-      if (oneTodo.id === id) {
-        return { ...oneTodo, checked: !oneTodo.checked };
-      }
-      return oneTodo;
-    });
-    setTodos(updatedTodos);
-    saveTodos(updatedTodos);
-  };
-
     return(
         <div className="todoApp">
             <div className="todoHeader">
@@ -39,7 +21,7 @@ const TodoApp = () => {
             <h2> REACT - Localstorage</h2>
             </div>
             <InputTodoApp addTodo={addTodo}/>
-            <TodoTasks todos={todos} completeTodo={completeTodo} deleteTodo={deleteTodo} />
+            <TodoTasks todos={todos} />
         </div>
     )
 }

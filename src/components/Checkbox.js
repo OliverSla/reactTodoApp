@@ -1,20 +1,19 @@
 import Square from '../svgs/Square'
-import { useState } from 'react'
 import Check from '../svgs/Check'
 import './Checkbox.css'
+import { useState, useEffect } from 'react'
 import { saveTodos, loadTodos } from '../data/data'
 
-const Checkbox = ({completed, handleComplete }) => {
-
+const Checkbox = ({oneTodo, id, index}) => {
   
-    const [isClicked, setIsClicked] = useState(false)
+  const [todos, setTodos] = useState(loadTodos);
 
-    
+
 
 
 
   return (
-    <div className="taskCheck" onClick={() => {isClicked ? setIsClicked(false) : setIsClicked(true)}}>
+    <div className="taskCheck" onClick={ () => {isClicked ? setIsClicked(false) : setIsClicked(true)}}>
     <Square />
     {isClicked && <Check />}
   </div>
