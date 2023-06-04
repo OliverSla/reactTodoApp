@@ -4,7 +4,7 @@ import { CloseSquare, MoreSquare, Edit2, Layer, Trash } from 'iconsax-react';
 import { saveTodos, loadTodos } from '../data/data'
 import { v4 as uuidv4 } from 'uuid';
 
-const Options = ({oneTodo, todos, setTodos}) => {
+const Options = ({oneTodo, todos, setTodos, setEditTodoIsClicked}) => {
 
 
     const [showOptions, setShowOptions] = useState(false)
@@ -34,7 +34,7 @@ const Options = ({oneTodo, todos, setTodos}) => {
     }
 
     const editTodo = () => {
-        
+        setEditTodoIsClicked(true)
     }
     
 
