@@ -13,7 +13,7 @@ const OneTodos = ({oneTodo, index}) => {
         <div className="oneTask" key={oneTodo.id}>
         <Checkbox oneTodo={oneTodo} id={oneTodo.id} index={index} />
         <div className="taskText"><h3> {oneTodo.text} </h3></div>
-        <Options />
+        <Options oneTodo={oneTodo}/>
     </div>
     )
 }
