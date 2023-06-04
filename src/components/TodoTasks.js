@@ -2,7 +2,7 @@ import './TodoTasks.css'
 import OneTodos from './OneTodos'
 
 
-const TodoTasks = ({todos}) => {
+const TodoTasks = ({todos, setTodos}) => {
 
 
 
@@ -13,7 +13,7 @@ const TodoTasks = ({todos}) => {
 
         {todos.map((oneTodo, index) => {
           return(
-            <OneTodos key={oneTodo.id} oneTodo={oneTodo} index={index} />
+            <OneTodos key={oneTodo.id} oneTodo={oneTodo} index={index} todos={todos} setTodos={setTodos}/>
           )
         })}
 

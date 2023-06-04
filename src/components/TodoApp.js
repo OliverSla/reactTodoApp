@@ -21,7 +21,7 @@ const TodoApp = () => {
             <h2> REACT - Localstorage</h2>
             </div>
             <InputTodoApp addTodo={addTodo}/>
-            <TodoTasks todos={todos} />
+            <TodoTasks todos={todos} setTodos={setTodos} />
         </div>
     )
 }

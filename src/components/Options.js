@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Options.css'
 import { CloseSquare, MoreSquare, Edit2, Layer, Trash } from 'iconsax-react';
 import { saveTodos, loadTodos } from '../data/data'
 
-const Options = ({oneTodo}) => {
+const Options = ({oneTodo, todos, setTodos}) => {
 
 
     const [showOptions, setShowOptions] = useState(false)
@@ -12,16 +12,15 @@ const Options = ({oneTodo}) => {
         setShowOptions(!showOptions)
     }
 
-
     const deleteTodo = () => {
-        const todos = loadTodos()
-        const uploadedTodos = todos.filter((todo) => {
-           return todo.id != oneTodo.id
+        const updatedTodos = todos.filter((todo) => {
+           return todo.id !== oneTodo.id
         })
-
-        saveTodos(uploadedTodos)
-        
+        setTodos(updatedTodos);
+        saveTodos(updatedTodos)
     }
+
+    
 
     const taskOptions = () => {
         return(

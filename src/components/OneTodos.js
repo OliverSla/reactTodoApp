@@ -4,7 +4,7 @@ import Options from './Options'
 
 
 
-const OneTodos = ({oneTodo, index}) => {
+const OneTodos = ({oneTodo, index, todos, setTodos}) => {
 
 
 
@@ -13,7 +13,7 @@ const OneTodos = ({oneTodo, index}) => {
         <div className="oneTask" key={oneTodo.id}>
         <Checkbox oneTodo={oneTodo} id={oneTodo.id} index={index} />
         <div className="taskText"><h3> {oneTodo.text} </h3></div>
-        <Options oneTodo={oneTodo}/>
+        <Options oneTodo={oneTodo} todos={todos} setTodos={setTodos}/>
     </div>
     )
 }
