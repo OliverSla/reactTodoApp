@@ -5,9 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50px;
-    width: 70px;
     position: relative;
+    margin-right: 20px;
 }
 
 .taskCheck:hover{
@@ -21,14 +20,14 @@
 
 .checkIconChecked{
     position: absolute;
-    bottom: 16px;
-    left: 23px;
-    transition: 0.5s;
+    bottom: 5px;
+    left: 8px;
+    transition: 0.3s;
 }
 
 
 .checkIconChecked {
-    animation-duration: 0.3s;
+    animation-duration: 0.15s;
     animation-name: slidein;
   }
   

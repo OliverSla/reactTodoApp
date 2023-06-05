@@ -2,6 +2,7 @@ import './OneTodo.css'
 import Checkbox from './Checkbox'
 import Options from './Options'
 import { useState, useRef, useEffect } from 'react'
+import { saveTodos, loadTodos } from '../data/data'
 
 
 
@@ -15,14 +16,30 @@ const OneTodos = ({oneTodo, index, todos, setTodos}) => {
         setInputValue(e.target.value)
       }
 
+    const editTodoHandler = () => {
+        setEditTodoIsClicked(false)
+
+        todos[index] = {
+            id: oneTodo.id,
+            text: inputValue,
+            completed: oneTodo.completed,
+          }
+            const updatedTodos = [...todos];
+            setTodos(updatedTodos);
+            saveTodos(updatedTodos);
+
+    }
+
 
     const textShow = () => {
+
+
 
         if(editTodoIsClicked) {
             return <div className="editInput">
                 <input className='editInputField' onChange={handleInputChange} value={inputValue} type="text" />
 
-                <button className='todoAddBtn'>Potvrdiť zmenu</button>
+                <button className='editBtn' onClick={editTodoHandler}>Potvrdiť zmenu</button>
             </div> 
             
         }else{

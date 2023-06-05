@@ -19,3 +19,13 @@
     display: flex;
     width: 100%;
 }
+
+.editBtn{
+    display: flex;
+    color: var(--secondary-color);
+    font-size: 16px;
+    
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

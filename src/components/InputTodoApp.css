@@ -19,6 +19,7 @@
     background: none;
     border: none;
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 .todoInputField:focus{
@@ -41,7 +42,6 @@
 }
 
 .todoAddBtn:hover{
-    transform: rotate(2deg) scale(1.1);
     color: white;
     cursor: pointer;
     background: var(--primary-color);
