@@ -27,6 +27,7 @@
     width: 150px;
     padding-right: 8px;
     justify-content: flex-end;
+    align-items: center;
     background: transparent;
     border: none;
     cursor: pointer;

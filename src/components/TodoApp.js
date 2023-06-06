@@ -1,6 +1,7 @@
 import './TodoApp.css'
 import InputTodoApp from './InputTodoApp.js'
 import TodoTasks from './TodoTasks.js'
+import DeleteAllTodos from './DeleteAllTodos.js'
 import { useState } from 'react'
 import { saveTodos, loadTodos } from '../data/data'
 
@@ -14,6 +15,11 @@ const TodoApp = () => {
         saveTodos(updatedTodos);
       };
 
+      const deleteTodos = () => {
+       setTodos([])
+       saveTodos([])
+      }
+
     return(
         <div className="todoApp">
             <div className="todoHeader">
@@ -22,6 +28,7 @@ const TodoApp = () => {
             </div>
             <InputTodoApp addTodo={addTodo}/>
             <TodoTasks todos={todos} setTodos={setTodos} />
+            <DeleteAllTodos deleteTodos={deleteTodos} todos={todos}/>
         </div>
     )
 }

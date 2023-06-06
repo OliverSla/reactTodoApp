@@ -1,0 +1,46 @@
+.deleteAllTodos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.deleteAllTodos button{
+    margin: 8px 0px 40px 0px;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: var(--input-shadows);
+    border: none;
+    transition: 0.2s linear;
+}
+
+.deleteAllTodos button p{
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 16px 30px;
+}
+
+.deleteAllTodos button:hover{
+    color: white;
+    cursor: pointer;
+    background: var(--primary-color);
+}
+
+.deleteAllTodos button:hover p{
+    color: white;
+    font-size: 16px;
+    padding: 16px 30px;
+}
+
+.todosCounter{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todosCounter p{
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 24px 0px 0px 24px;
+}

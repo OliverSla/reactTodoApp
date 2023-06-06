@@ -14,7 +14,7 @@ const Options = ({oneTodo, todos, setTodos, setEditTodoIsClicked}) => {
     const optionHandleClick = () => {
         setShowOptions(!showOptions)
     }
-
+    
     const deleteTodo = () => {
         const updatedTodos = todos.filter((todo) => {
            return todo.id !== oneTodo.id

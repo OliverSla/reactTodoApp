@@ -12,6 +12,7 @@ const OneTodos = ({oneTodo, index, todos, setTodos}) => {
     const [inputValue, setInputValue] = useState(oneTodo.text)
     const [line, setLine] = useState(oneTodo.completed)
 
+
     const handleInputChange = (e) => {
         setInputValue(e.target.value)
       }
@@ -37,7 +38,7 @@ const OneTodos = ({oneTodo, index, todos, setTodos}) => {
 
         if(editTodoIsClicked) {
             return <div className="editInput">
-                <input className='editInputField' onChange={handleInputChange} value={inputValue} type="text" />
+                <input className='editInputField' onChange={handleInputChange} value={inputValue} type="text" autoFocus />
                 <button className='editBtn' onClick={editTodoHandler}>Potvrdiť zmenu</button>
             </div> 
             
