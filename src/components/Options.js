@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Options.css'
+import More from '../svgs/More'
+import Close from '../svgs/Close'
 import { CloseSquare, MoreSquare, Edit2, Layer, Trash } from 'iconsax-react';
 import { saveTodos, loadTodos } from '../data/data'
 import { v4 as uuidv4 } from 'uuid';
@@ -50,16 +52,16 @@ const Options = ({oneTodo, todos, setTodos, setEditTodoIsClicked}) => {
     
     const openOptions = () => {
         return(
-            <div>
-            <MoreSquare className='iconMore' />
+            <div className='iconMore'>
+            <More />
             </div>
         )
     }
     
     const closeOptions = () => {
         return(
-            <div>
-            <CloseSquare className='iconMore' />
+            <div className='iconMore'>
+            <Close />
             {taskOptions()}
             </div>
         )

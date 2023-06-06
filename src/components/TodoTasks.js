@@ -2,8 +2,8 @@ import './TodoTasks.css'
 import OneTodos from './OneTodos'
 
 
-const TodoTasks = ({todos, setTodos}) => {
 
+const TodoTasks = ({todos, setTodos}) => {
 
 
   return (

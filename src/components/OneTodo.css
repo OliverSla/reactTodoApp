@@ -24,8 +24,27 @@
     display: flex;
     color: var(--secondary-color);
     font-size: 16px;
-    
+    width: 150px;
+    padding-right: 8px;
+    justify-content: flex-end;
     background: transparent;
     border: none;
     cursor: pointer;
 }
+
+.oneTaskAnimation{
+
+    animation-duration: 0.8s;
+    animation-name: slideTask;
+}
+
+
+@keyframes slideTask {
+    from {
+      left: 100px;  
+      opacity: 0;
+    }
+    to {
+      left: 0px; 
+      opacity: 1;
+    }}
