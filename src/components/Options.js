@@ -6,11 +6,11 @@ import { CloseSquare, MoreSquare, Edit2, Layer, Trash } from "iconsax-react";
 import { saveTodos, loadTodos } from "../data/data";
 import { v4 as uuidv4 } from "uuid";
 
-const Options = ({ oneTodo, todos, setTodos, setEditTodoIsClicked }) => {
+const Options = ({  oneTodo, todos, setTodos, setEditTodoIsClicked, isOpen, toggleOptions }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const optionHandleClick = () => {
-    setShowOptions(!showOptions);
+    toggleOptions(oneTodo.id);
   };
 
   const deleteTodo = () => {
@@ -86,7 +86,7 @@ const Options = ({ oneTodo, todos, setTodos, setEditTodoIsClicked }) => {
 
   return (
     <div className="options" onClick={optionHandleClick}>
-      {showOptions ? closeOptions() : openOptions()}
+      {isOpen ? closeOptions() : openOptions()}
     </div>
   );
 };

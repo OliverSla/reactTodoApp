@@ -6,7 +6,7 @@ import { saveTodos, loadTodos } from '../data/data'
 
 
 
-const OneTodos = ({oneTodo, index, todos, setTodos}) => {
+const OneTodos = ({oneTodo, index, todos, setTodos, isOpen, toggleOptions}) => {
 
     const [editTodoIsClicked, setEditTodoIsClicked] = useState(false)
     const [inputValue, setInputValue] = useState(oneTodo.text)
@@ -53,7 +53,14 @@ const OneTodos = ({oneTodo, index, todos, setTodos}) => {
 
         <div className={line ? 'taskTextLine' : 'taskText'}>{textShow()}</div>
 
-        <Options oneTodo={oneTodo} todos={todos} setTodos={setTodos} setEditTodoIsClicked={setEditTodoIsClicked} />
+        <Options 
+        oneTodo={oneTodo} 
+        todos={todos} 
+        setTodos={setTodos} 
+        setEditTodoIsClicked={setEditTodoIsClicked} 
+        isOpen={isOpen}
+        toggleOptions={toggleOptions}
+    />
     </div>
     )
 }
